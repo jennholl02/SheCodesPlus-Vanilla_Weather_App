@@ -78,7 +78,30 @@
   color: white;
   transition: ease-in 100ms;
 }
-
 ul {
   list-style: none;
+  color: #00204a;
+}
+
+.current-factors {
+  list-style: none;
+  color: #00204a;
+}
+
+.current-temperature {
+  font-size: 50px;
+  text-align: center;
+  padding-right: 15px;
+}
+
+.current-description {
+  font-size: 20px;
+  text-align: center;
+  padding-right: 15px;
+}
+
+.footer {
+  text-align: center;
+  font-size: 10px;
+  margin-top: 5px;
 }
