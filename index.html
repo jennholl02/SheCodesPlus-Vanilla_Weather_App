@@ -15,7 +15,66 @@
     <title>Vanilla Weather App</title>
   </head>
   <body>
-    <h1>Let's Make Some Weather</h1>
+    <div id="root">
+      <div class="weather-app">
+        <div class="container" id="main-container">
+          <div class="weather">
+            <h1>Simply Weather</h1>
+            <h2 class="time-date">time/date</h2>
+            <form>
+              <div class="row">
+                <div class="col-5">
+                  <input
+                    type="search"
+                    placeholder="Enter A City"
+                    id="city-search"
+                  />
+                </div>
+                <div class="col-3">
+                  <input type="submit" class="btn btn-primary" value="Search" />
+                </div>
+                <div class="container" id="current-weather-container">
+                  <div class="row">
+                    <div class="col-4">
+                      <p class="current-city">Current City</p>
+                    </div>
+                    <div class="col-4">
+                      <input
+                        type="search"
+                        class="btn btn-primary"
+                        value="Current Location"
+                      />
+                    </div>
+                    <div class="row">
+                      <div class="col-4">
+                        <img src="images/sunny weather.png" alt="Sunny Weather Icon" width=100px/>
+                      </div>
+                      <div class="col-4">
+                        <ul>
+                          <li class="current-temperature">82 ℉</li>
+                          <li class="weather-description"> Description</li>
+                        </ul>
+                      </div>
+                      <div class="col-4">
+                        <ul>
+                          <li class="current-precipitation">5%</li>
+                          <li class="current-humidity">52%</li>
+                          <li class = "current-wind">5 mp</li>
+                            <li class="current-high">High: 88 ℉</li>
+                            <li class="current-low">Low: 64 ℉</li>                 
+                        </ul>
+                      </div>
+                      <p>This page created with Open Source Code by Jennifer Holliday</p>
+                    </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <script src="src/app.js"></script>
   </body>
