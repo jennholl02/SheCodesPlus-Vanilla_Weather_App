@@ -1,0 +1,15 @@
+.root {
+  background: linear-gradient(to top, #dfe9f3 0%, white 100%);
+  border-style: double;
+  border-radius: 8%;
+  display: block;
+  margin: 0 auto;
+  margin-top: 25px;
+  padding: 15px 15px 15px 15px;
+  width: 600px;
+  font-family: "Cabin Condensed", sans-serif;
+}
+
+.title {
+  text-align: center;
+}
