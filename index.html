@@ -24,8 +24,7 @@
       <div class="weather-app">
         <div class="container" id="main-container">
           <div class="weather">
-            <h1 class="title">Simply Weather</h1>
-            <h2 class="time-date">time/date</h2>
+            <h1 class="title">Simply Weather</h1>           
             <form>
               <div class="row">
                 <div class="col-5">
@@ -35,24 +34,27 @@
                     id="city-search"
                   />
                 </div>
-                <div class="col-3">
-                  <input type="submit" class="btn btn-primary" value="Search" />
+                <div class="col">
+                  <input type="submit" class="btn btn-primary" value="Search" id="city-search-button"/>
                 </div>
                 <div class="container" id="current-weather-container">
                   <div class="row">
-                    <div class="col-4">
+                    <div class="col-6">
                       <p class="current-city">Current City</p>
+                      <p class="time-date">time/date</p>
                     </div>
-                    <div class="col-4">
+                    <div class="col-6">
                       <input
-                        type="search"
+                        type="submit"
                         class="btn btn-primary"
                         value="Current Location"
+                        id="current-location-button"
                       />
+                    </div>
                     </div>
                     <div class="row">
                       <div class="col-4">
-                        <img src="images/sunny weather.png" alt="Sunny Weather Icon" width=100px/>
+                        <img src="images/sunny weather.png" alt="Sunny Weather Icon" id="sunny-image"/>
                       </div>
                       <div class="col-4">
                         <ul>
