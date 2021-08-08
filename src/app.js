@@ -63,6 +63,12 @@ function showForecast(response) {
   let lowElement = Math.round(response.data.main.temp_min);
   let insertLow = document.querySelector("#current-low");
   insertLow.innerHTML = `${lowElement} ℉`;
+
+  let iconElement = document.querySelector("#sunny-image");
+  iconElement.setAttribute(
+    "src",
+    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+  );
 }
 
 function citySearchNow(event) {
