@@ -15,7 +15,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cabin+Condensed:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 <link rel="stylesheet" href="src/style.css" />
     <title>The Weather...Simplified</title>
   </head>
@@ -66,11 +66,11 @@
                       </div>
                       <div class="col-4">
                         <ul class="current-factors">
-                          <li class="current-precipitation">Precipitation: 5%</li>
-                          <li class="current-humidity">Humidity: 52%</li>
-                          <li class = "current-wind">Wind: 5 mp</li>
-                            <li class="current-high">High: 88 ℉</li>
-                            <li class="current-low">Low: 64 ℉</li>                 
+                          <li>Precipitation: <span class="current-precipitation">5%</span></li>
+                          <li>Humidity: <span class="current-humidity">52%</span></li>
+                          <li>Wind: <span class = "current-wind">5 mph</span></li>
+                            <li>High: <span class="current-high">88 ℉</span></li>
+                            <li>Low: <span class="current-low">64 ℉</span></li>               
                         </ul>
                       </div>                  
                     </div>

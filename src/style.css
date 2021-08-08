@@ -63,9 +63,9 @@
 }
 
 #current-location-button {
-  background-color: #fdb44b;
-  border-color: #00204a;
-  color: #00204a;
+  background-color: #00bbf0;
+  color: white;
+
   font-size: 18px;
   margin-left: 80px;
   width: 175px;
@@ -74,8 +74,9 @@
 }
 
 #current-location-button:hover {
-  background-color: #00bbf0;
-  color: white;
+  background-color: #fdb44b;
+  border-color: #00204a;
+  color: #00204a;
   transition: ease-in 100ms;
 }
 ul {
