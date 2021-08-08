@@ -69,12 +69,7 @@ function citySearchNow(event) {
   event.preventDefault();
   let searchInput = document.querySelector("#city-search");
   let currentCity = document.querySelector("#current-city");
-  if (searchInput.value) {
-    currentCity.innerHTML = `${searchInput.value}`;
-  } else {
-    currentCity.innerHTML = null;
-    alert("Please Enter a City in the Search Bar. Thank you!");
-  }
+  currentCity.innerHTML = `${searchInput.value}`;
 
   let apiKey = "9eb0f850fd87a403bc76584028e843ca";
   let endpoint = "https://api.openweathermap.org/data/2.5/weather";
@@ -83,5 +78,28 @@ function citySearchNow(event) {
 
   axios.get(apiUrl).then(showForecast);
 }
+
 let citySearch = document.querySelector("#search-city");
 citySearch.addEventListener("submit", citySearchNow);
+
+function showCurrentLocation(position) {
+  let apiKey = "9eb0f850fd87a403bc76584028e843ca";
+  let endpoint = "https://api.openweathermap.org/data/2.5/weather";
+  let latitude = position.coords.latitude;
+  let longitude = position.coords.longitude;
+  let units = "imperial";
+  let apiUrl = `${endpoint}?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=${units}`;
+
+  //let name = position.coords.name;
+  let insertName = document.querySelector("#current-city");
+  insertName.innerHTML = "Your GeoLocation";
+
+  axios.get(apiUrl).then(showForecast);
+}
+
+function getCurrentPosition() {
+  navigator.geolocation.getCurrentPosition(showCurrentLocation);
+}
+
+let currentLocation = document.querySelector("#current-location-button");
+currentLocation.addEventListener("click", getCurrentPosition);
