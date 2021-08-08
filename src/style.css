@@ -42,11 +42,12 @@
   transition: ease-in 100ms;
 }
 
-.current-city {
+#current-city {
   color: #00204a;
   font-size: 30px;
   margin-left: 50px;
   text-align: center;
+  text-transform: capitalize;
 }
 
 #time-date {

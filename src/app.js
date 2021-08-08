@@ -37,3 +37,13 @@ let month = months[date.getMonth()];
 
 let currentDateTime = document.querySelector("#time-date");
 currentDateTime.innerHTML = `${day}, ${month} ${today}  at ${hour}:${minutes} ${ampm}`;
+
+function citySearchNow(event) {
+  event.preventDefault();
+  let searchInput = document.querySelector("#city-search");
+
+  let currentCity = document.querySelector("#current-city");
+  currentCity.innerHTML = `${searchInput.value}`;
+}
+let citySearch = document.querySelector("#search-city");
+citySearch.addEventListener("submit", citySearchNow);
