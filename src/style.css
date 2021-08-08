@@ -88,18 +88,21 @@ ul {
 .current-factors {
   list-style: none;
   color: #00204a;
+  padding-top: 15px;
+  font-size: 18px;
 }
 
-.current-temperature {
-  font-size: 50px;
+#current-temperature {
+  font-size: 45px;
   text-align: center;
   padding-right: 15px;
 }
 
-.current-description {
-  font-size: 20px;
+#current-description {
+  font-size: 22px;
   text-align: center;
   padding-right: 15px;
+  text-transform: capitalize;
 }
 
 .footer {

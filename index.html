@@ -10,13 +10,14 @@
       integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We"
       crossorigin="anonymous"
     />
-
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cabin+Condensed:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 <link rel="stylesheet" href="src/style.css" />
+
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
     <title>The Weather...Simplified</title>
   </head>
   <body>
@@ -42,7 +43,7 @@
                 <div class="container" id="current-weather-container">
                   <div class="row">
                     <div class="col-6">
-                      <p id="current-city"> Enter A City Above </p>
+                      <p id="current-city">  </p>
                       <p id="time-date"> </p>
                     </div>
                     <div class="col-6">
@@ -60,17 +61,16 @@
                       </div>
                       <div class="col-4">
                         <ul>
-                          <li class="current-temperature">82 ℉</li>
-                          <li class="current-description"> Description</li>
+                          <li id="current-temperature">℉</li>
+                          <li id="current-description"> </li>
                         </ul>
                       </div>
                       <div class="col-4">
                         <ul class="current-factors">
-                          <li>Precipitation: <span class="current-precipitation">5%</span></li>
-                          <li>Humidity: <span class="current-humidity">52%</span></li>
-                          <li>Wind: <span class = "current-wind">5 mph</span></li>
-                            <li>High: <span class="current-high">88 ℉</span></li>
-                            <li>Low: <span class="current-low">64 ℉</span></li>               
+                          <li>Humidity: <span id="current-humidity">%</span></li>
+                          <li>Wind: <span id = "current-wind">mph</span></li>
+                            <li>High: <span id="current-high">℉</span></li>
+                            <li>Low: <span id="current-low">℉</span></li>               
                         </ul>
                       </div>                  
                     </div>
