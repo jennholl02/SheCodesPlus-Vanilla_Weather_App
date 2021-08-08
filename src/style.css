@@ -49,17 +49,17 @@
   text-align: center;
 }
 
-.time-date {
+#time-date {
   color: #00204a;
   font-size: 20px;
-  margin-left: 50px;
+  margin-left: 30px;
   margin-top: -15px;
   text-align: center;
 }
 #sunny-image {
   display: block;
   margin: 0 auto;
-  width: 100px;
+  width: 150px;
 }
 
 #current-location-button {
