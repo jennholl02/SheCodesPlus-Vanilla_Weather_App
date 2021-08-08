@@ -92,7 +92,7 @@ function showCurrentLocation(position) {
 
   //let name = position.coords.name;
   let insertName = document.querySelector("#current-city");
-  insertName.innerHTML = "Your GeoLocation";
+  insertName.innerHTML = "Current Location";
 
   axios.get(apiUrl).then(showForecast);
 }
