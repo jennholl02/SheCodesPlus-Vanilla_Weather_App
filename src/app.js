@@ -64,6 +64,10 @@ function showForecast(response) {
   let insertLow = document.querySelector("#current-low");
   insertLow.innerHTML = `${lowElement} ℉`;
 
+  let name = response.data.name;
+  let insertName = document.querySelector("#current-city");
+  insertName.innerHTML = `${name}`;
+
   let iconElement = document.querySelector("#sunny-image");
   iconElement.setAttribute(
     "src",
@@ -95,10 +99,6 @@ function showCurrentLocation(position) {
   let longitude = position.coords.longitude;
   let units = "imperial";
   let apiUrl = `${endpoint}?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=${units}`;
-
-  //let name = position.coords.name;
-  let insertName = document.querySelector("#current-city");
-  insertName.innerHTML = "Current Location";
 
   axios.get(apiUrl).then(showForecast);
 }
