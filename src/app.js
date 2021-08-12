@@ -8,15 +8,7 @@ hour = hour ? hour : 12; // the hour '0' should be '12'
 
 let minutes = date.getMinutes();
 minutes = minutes < 10 ? "0" + minutes : minutes;
-let days = [
-  "Sunday",
-  "Monday",
-  "Tuesday",
-  "Wednesday",
-  "Thursday",
-  "Friday",
-  "Saturday",
-];
+let days = ["Sun.", "Mon.", "Tues.", "Wed.", "Thurs.", "Fri.", "Sat."];
 let day = days[date.getDay()];
 
 let months = [
