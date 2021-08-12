@@ -95,6 +95,7 @@ ul {
 #current-temperature {
   font-size: 50px;
   text-align: center;
+  padding-left: 10px;
 }
 
 #current-description {
@@ -105,7 +106,7 @@ ul {
 
 .conversion {
   font-size: 20px;
-  padding-top: 100px;
+  padding-top: 25px;
 }
 
 .footer {

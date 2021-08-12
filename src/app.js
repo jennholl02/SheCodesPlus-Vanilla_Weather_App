@@ -34,7 +34,7 @@ currentDateTime.innerHTML = `${day}, ${month} ${today}  at ${hour}:${minutes} ${
 function showForecast(response) {
   let tempElement = Math.round(response.data.main.temp);
   let insertTemp = document.querySelector("#current-temperature");
-  insertTemp.innerHTML = `${tempElement} ℉`;
+  insertTemp.innerHTML = `${tempElement} °`;
 
   let descriptionElement = response.data.weather[0].description;
   let insertDescription = document.querySelector("#current-description");
