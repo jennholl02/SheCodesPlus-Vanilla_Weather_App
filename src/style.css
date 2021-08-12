@@ -93,16 +93,19 @@ ul {
 }
 
 #current-temperature {
-  font-size: 45px;
+  font-size: 50px;
   text-align: center;
-  padding-right: 15px;
 }
 
 #current-description {
   font-size: 22px;
   text-align: center;
-  padding-right: 15px;
   text-transform: capitalize;
+}
+
+.conversion {
+  font-size: 20px;
+  padding-top: 100px;
 }
 
 .footer {
