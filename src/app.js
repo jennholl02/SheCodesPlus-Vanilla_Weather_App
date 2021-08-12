@@ -40,6 +40,10 @@ function showForecast(response) {
   let insertDescription = document.querySelector("#current-description");
   insertDescription.innerHTML = `${descriptionElement}`;
 
+  let feelsLikeElement = Math.round(response.data.main.feels_like);
+  let insertFeelsLike = document.querySelector("#feels-like");
+  insertFeelsLike.innerHTML = `${feelsLikeElement} ℉`;
+
   let humidityElement = response.data.main.humidity;
   let insertHumidity = document.querySelector("#current-humidity");
   insertHumidity.innerHTML = `${humidityElement}%`;
