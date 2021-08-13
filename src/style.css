@@ -114,3 +114,39 @@ ul {
   font-size: 10px;
   margin-top: 5px;
 }
+
+#five-day-forecast {
+  margin-top: 15px;
+  margin-left: 10px;
+}
+
+.day-by-day-forecast {
+  font-size: 12px;
+  text-align: center;
+}
+#first-forecast-image {
+  display: block;
+  margin: 0 auto;
+  width: 50px;
+}
+
+#second-forecast-image {
+  display: block;
+  margin: 0 auto;
+  width: 50px;
+}
+#third-forecast-image {
+  display: block;
+  margin: 0 auto;
+  width: 50px;
+}
+#fourth-forecast-image {
+  display: block;
+  margin: 0 auto;
+  width: 50px;
+}
+#fifth-forecast-image {
+  display: block;
+  margin: 0 auto;
+  width: 50px;
+}
