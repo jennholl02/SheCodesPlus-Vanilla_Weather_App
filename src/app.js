@@ -1,3 +1,35 @@
+let date = new Date();
+let today = date.getDate();
+
+let hour = date.getHours();
+let ampm = hour >= 12 ? "pm" : "am";
+hour = hour % 12;
+hour = hour ? hour : 12; // the hour '0' should be '12'
+
+let minutes = date.getMinutes();
+minutes = minutes < 10 ? "0" + minutes : minutes;
+let days = ["Sun.", "Mon.", "Tues.", "Wed.", "Thurs.", "Fri.", "Sat."];
+let day = days[date.getDay()];
+
+let months = [
+  "January",
+  "February",
+  "March",
+  "April",
+  "May",
+  "June",
+  "July",
+  "August",
+  "September",
+  "October",
+  "November",
+  "December",
+];
+let month = months[date.getMonth()];
+
+let currentDateTime = document.querySelector("#time-date");
+currentDateTime.innerHTML = `${day}, ${month} ${today}  at ${hour}:${minutes} ${ampm}`;
+
 function formatDate(timestamp) {
   let date = new Date(timestamp);
   let hours = date.getHours();
