@@ -120,33 +120,23 @@ ul {
   margin-left: 10px;
 }
 
-.day-by-day-forecast {
-  font-size: 12px;
+.forecast-day {
   text-align: center;
-}
-#first-forecast-image {
-  display: block;
-  margin: 0 auto;
-  width: 50px;
+  font-size: 15px;
+  opacity: 85%;
 }
 
-#second-forecast-image {
-  display: block;
-  margin: 0 auto;
-  width: 50px;
+.forecast-highlow {
+  font-size: 13px;
+  text-align: center;
 }
-#third-forecast-image {
-  display: block;
-  margin: 0 auto;
-  width: 50px;
+.forecast-low {
+  opacity: 60%;
 }
-#fourth-forecast-image {
+#forecast-image {
   display: block;
   margin: 0 auto;
-  width: 50px;
-}
-#fifth-forecast-image {
-  display: block;
-  margin: 0 auto;
-  width: 50px;
+  width: 40px;
+  padding-top: 3px;
+  padding-bottom: 5px;
 }
