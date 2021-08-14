@@ -22,7 +22,8 @@ function formatDate(timestamp) {
   return `${day} ${hours}:${minutes}`;
 }
 
-function displayForecast() {
+function displayForecast(response) {
+  console.log(response.data.daily);
   let forecastElement = document.querySelector("#five-day-forecast");
 
   let days = ["Sun", "Mon", "Tues", "Wed", "Thurs"];
@@ -45,9 +46,7 @@ function displayForecast() {
 }
 
 function getForecast(coordinates) {
-  console.log(coordinates);
   let apiKey = "9eb0f850fd87a403bc76584028e843ca";
-
   let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=imperial`;
 
   axios.get(apiUrl).then(displayForecast);
@@ -128,5 +127,4 @@ function getCurrentPosition() {
 let currentLocation = document.querySelector("#current-location-button");
 currentLocation.addEventListener("click", getCurrentPosition);
 
-displayForecast();
 search("Denver");
