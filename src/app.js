@@ -31,6 +31,7 @@ let currentDateTime = document.querySelector("#time-date");
 currentDateTime.innerHTML = `${day}, ${month} ${today}  at ${hour}:${minutes} ${ampm}`;
 //
 //
+
 function showForecast(response) {
   let tempElement = Math.round(response.data.main.temp);
   let insertTemp = document.querySelector("#current-temperature");
@@ -74,8 +75,8 @@ function showForecast(response) {
 function citySearchNow(event) {
   event.preventDefault();
   let searchInput = document.querySelector("#city-search");
-  let currentCity = document.querySelector("#current-city");
-  currentCity.innerHTML = `${searchInput.value}`;
+  //let currentCity = document.querySelector("#current-city");
+  //currentCity.innerHTML = `${searchInput.value}`;
 
   let apiKey = "9eb0f850fd87a403bc76584028e843ca";
   let endpoint = "https://api.openweathermap.org/data/2.5/weather";
