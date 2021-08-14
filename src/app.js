@@ -28,7 +28,7 @@ let months = [
 let month = months[date.getMonth()];
 
 let currentDateTime = document.querySelector("#time-date");
-currentDateTime.innerHTML = `${day}, ${month} ${today}  at ${hour}:${minutes} ${ampm}`;
+currentDateTime.innerHTML = `Last Updated: ${day}, ${month} ${today}  at ${hour}:${minutes} ${ampm}`;
 
 function formatDate(timestamp) {
   let date = new Date(timestamp);
@@ -69,7 +69,7 @@ function displayForecast(response) {
 
   let forecastHTML = `<div class="row" >`;
   dailyForecast.forEach(function (forecastDay, index) {
-    if (index < 5) {
+    if (index < 6) {
       forecastHTML =
         forecastHTML +
         `

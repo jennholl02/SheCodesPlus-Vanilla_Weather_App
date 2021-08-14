@@ -52,10 +52,11 @@
 
 #time-date {
   color: #00204a;
-  font-size: 20px;
+  font-size: 15px;
   margin-left: 30px;
   margin-top: -15px;
   text-align: center;
+  opacity: 75%;
 }
 #sunny-image {
   display: block;
@@ -66,7 +67,6 @@
 #current-location-button {
   background-color: #00bbf0;
   color: white;
-
   font-size: 18px;
   margin-left: 80px;
   width: 175px;
@@ -80,11 +80,11 @@
   color: #00204a;
   transition: ease-in 100ms;
 }
-ul {
+.current-weather {
   list-style: none;
   color: #00204a;
+  padding-right: 35px;
 }
-
 .current-factors {
   list-style: none;
   color: #00204a;
@@ -104,11 +104,6 @@ ul {
   text-transform: capitalize;
 }
 
-.conversion {
-  font-size: 20px;
-  padding-top: 25px;
-}
-
 .footer {
   text-align: center;
   font-size: 10px;
@@ -116,18 +111,18 @@ ul {
 }
 
 #five-day-forecast {
+  margin-top: 15px;
   margin-bottom: 15px;
-  margin-left: 20px;
 }
 
 .forecast-day {
   text-align: center;
-  font-size: 15px;
+  font-size: 16px;
   opacity: 85%;
 }
 
 .forecast-highlow {
-  font-size: 13px;
+  font-size: 14px;
   text-align: center;
 }
 .forecast-low {
@@ -136,7 +131,7 @@ ul {
 #forecast-image {
   display: block;
   margin: 0 auto;
-  width: 40px;
+  width: 50px;
   padding-top: 3px;
   padding-bottom: 5px;
 }
