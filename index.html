@@ -10,13 +10,16 @@
       integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We"
       crossorigin="anonymous"
     />
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cabin+Condensed:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cabin+Condensed:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
 
-<link rel="stylesheet" href="src/style.css" />
+    <link rel="stylesheet" href="src/style.css" />
 
-<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 
     <title>Simply Weather</title>
   </head>
@@ -25,26 +28,33 @@
       <div class="weather-app">
         <div class="container" id="main-container">
           <div class="weather">
-            <h1 class="title">Simply Weather</h1>           
+            <h1 class="title">Simply Weather</h1>
             <form id="search-city">
               <div class="row">
                 <div class="col-5">
                   <input
                     type="search"
                     placeholder="Enter a City"
-                    autocomplete="off";
-                    autofocus = "on";
+                    autocomplete="off"
+                    ;
+                    autofocus="on"
+                    ;
                     id="city-search"
                   />
                 </div>
                 <div class="col">
-                  <input type="submit" class="btn btn-primary" value="Search" id="city-search-button"/>
+                  <input
+                    type="submit"
+                    class="btn btn-primary"
+                    value="Search"
+                    id="city-search-button"
+                  />
                 </div>
                 <div class="container" id="current-weather-container">
                   <div class="row">
                     <div class="col-6">
-                      <p id="current-city">  </p>
-                      <p id="time-date"> </p>
+                      <p id="current-city"></p>
+                      <p id="time-date"></p>
                     </div>
                     <div class="col-6">
                       <input
@@ -54,52 +64,54 @@
                         id="current-location-button"
                       />
                     </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-2">
+                      <img
+                        src="images/sunny weather.png"
+                        alt="Sunny Weather Icon"
+                        id="sunny-image"
+                      />
                     </div>
-                    <div class="row">
-                      <div class="col-2">
-                        <img src="images/sunny weather.png" alt="Sunny Weather Icon" id="sunny-image"/>
-                      </div>
-                      <div class="col-4">
-                        <ul>
-                          <li id="current-temperature"></li>
-                          <li id="current-description"> </li>
-                        </ul>                
-                      </div>
-                      <div class="col-2">
-                        <div class="conversion">
-                        <span class="fahrenheit">℉  | </span> 
+                    <div class="col-4">
+                      <ul>
+                        <li id="current-temperature"></li>
+                        <li id="current-description"></li>
+                      </ul>
+                    </div>
+                    <div class="col-2">
+                      <div class="conversion">
+                        <span class="fahrenheit">℉ | </span>
                         <span class="celsius">℃</span>
-                        </div>
                       </div>
-                      <div class="col-4">
-                        <ul class="current-factors">
-                          <li>Feels Like: <span id="feels-like">℉</span></li>
-                          <li>Humidity: <span id="current-humidity">%</span></li>
-                          <li>Wind: <span id = "current-wind">mph</span></li>
-                            <li>High: <span id="current-high">℉</span></li>
-                            <li>Low: <span id="current-low">℉</span></li>               
-                        </ul>
-                      </div>                  
                     </div>
+                    <div class="col-4">
+                      <ul class="current-factors">
+                        <li>Feels Like: <span id="feels-like">℉</span></li>
+                        <li>Humidity: <span id="current-humidity">%</span></li>
+                        <li>Wind: <span id="current-wind">mph</span></li>
+                        <li>High: <span id="current-high">℉</span></li>
+                        <li>Low: <span id="current-low">℉</span></li>
+                      </ul>
                     </div>
+                    <div class="weather-forecast" id="five-day-forecast"></div>
                   </div>
                 </div>
-              </div>
-              <div class="row" id="five-day-forecast">
-                <div class="col-2" >
-                  <ul class = "day-by-day-forecast">
-                  <li class="forecast-day">Sun</li>
-                  <li class="forecast-weather-image"><img src="images/sunny weather.png" alt="Sunny Weather Icon" id="forecast-image"/></li>
-                  <li class="forecast-highlow"><span class="forecast-high">76° </span><span class="forecast-low"> 54°</span>
-                  </li>
-                </ul>
-              </div>   
               </div>
             </form>
           </div>
         </div>
       </div>
-    <p class="footer">This page created with <a href="https://github.com/jennholl02/SheCodesPlus-Vanilla_Weather_App" target="_blank">Open Source Code </a>by Jennifer Holliday</p>
+    </div>
+
+    <p class="footer">
+      This page created with
+      <a
+        href="https://github.com/jennholl02/SheCodesPlus-Vanilla_Weather_App"
+        target="_blank"
+        >Open Source Code </a
+      >by Jennifer Holliday
+    </p>
 
     <script src="src/app.js"></script>
   </body>

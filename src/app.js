@@ -29,8 +29,28 @@ let month = months[date.getMonth()];
 
 let currentDateTime = document.querySelector("#time-date");
 currentDateTime.innerHTML = `${day}, ${month} ${today}  at ${hour}:${minutes} ${ampm}`;
-//
-//
+
+function displayForecast() {
+  let forecastElement = document.querySelector("#five-day-forecast");
+
+  let days = ["Sun", "Mon", "Tues", "Wed", "Thurs"];
+
+  let forecastHTML = `<div class="row" >`;
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `
+      <div class="col-2" >      
+                  <div class="forecast-day">${day}</div>
+                  <div class="forecast-weather-image"><img src="images/sunny weather.png" alt="Sunny Weather Icon" id="forecast-image"/></div>
+                  <div class="forecast-highlow"><span class="forecast-high">76° </span><span class="forecast-low"> 54°</span></div>   
+          </div>
+        `;
+  });
+
+  forecastHTML = forecastHTML + `</div>`;
+  forecastElement.innerHTML = forecastHTML;
+}
 
 function showForecast(response) {
   let tempElement = Math.round(response.data.main.temp);
@@ -70,6 +90,7 @@ function showForecast(response) {
     "src",
     `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   );
+  console.log(response.data);
 }
 
 function citySearchNow(event) {
@@ -106,3 +127,5 @@ function getCurrentPosition() {
 
 let currentLocation = document.querySelector("#current-location-button");
 currentLocation.addEventListener("click", getCurrentPosition);
+
+displayForecast();
