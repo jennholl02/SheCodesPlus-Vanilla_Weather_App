@@ -1,34 +1,26 @@
-let date = new Date();
-let today = date.getDate();
+function formatDate(timestamp) {
+  let date = new Date(timestamp);
+  let hours = date.getHours();
+  if (hours < 10) {
+    hours = `0${hours}`;
+  }
+  let minutes = date.getMinutes();
+  if (minutes < 10) {
+    minutes = `0${minutes}`;
+  }
 
-let hour = date.getHours();
-let ampm = hour >= 12 ? "pm" : "am";
-hour = hour % 12;
-hour = hour ? hour : 12; // the hour '0' should be '12'
-
-let minutes = date.getMinutes();
-minutes = minutes < 10 ? "0" + minutes : minutes;
-let days = ["Sun.", "Mon.", "Tues.", "Wed.", "Thurs.", "Fri.", "Sat."];
-let day = days[date.getDay()];
-
-let months = [
-  "January",
-  "February",
-  "March",
-  "April",
-  "May",
-  "June",
-  "July",
-  "August",
-  "September",
-  "October",
-  "November",
-  "December",
-];
-let month = months[date.getMonth()];
-
-let currentDateTime = document.querySelector("#time-date");
-currentDateTime.innerHTML = `${day}, ${month} ${today}  at ${hour}:${minutes} ${ampm}`;
+  let days = [
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+  ];
+  let day = days[date.getDay()];
+  return `${day} ${hours}:${minutes}`;
+}
 
 function displayForecast() {
   let forecastElement = document.querySelector("#five-day-forecast");
@@ -52,7 +44,16 @@ function displayForecast() {
   forecastElement.innerHTML = forecastHTML;
 }
 
-function showForecast(response) {
+function getForecast(coordinates) {
+  console.log(coordinates);
+  let apiKey = "9eb0f850fd87a403bc76584028e843ca";
+
+  let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=imperial`;
+
+  axios.get(apiUrl).then(displayForecast);
+}
+
+function displayForecastElements(response) {
   let tempElement = Math.round(response.data.main.temp);
   let insertTemp = document.querySelector("#current-temperature");
   insertTemp.innerHTML = `${tempElement} °`;
@@ -90,25 +91,24 @@ function showForecast(response) {
     "src",
     `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   );
-  console.log(response.data);
+
+  getForecast(response.data.coord);
 }
 
-function citySearchNow(event) {
-  event.preventDefault();
-  let searchInput = document.querySelector("#city-search");
-  //let currentCity = document.querySelector("#current-city");
-  //currentCity.innerHTML = `${searchInput.value}`;
-
+function search(city) {
   let apiKey = "9eb0f850fd87a403bc76584028e843ca";
-  let endpoint = "https://api.openweathermap.org/data/2.5/weather";
-  let units = "imperial";
-  let apiUrl = `${endpoint}?q=${searchInput.value}&appid=${apiKey}&units=${units}`;
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=imperial`;
+  axios.get(apiUrl).then(displayForecastElements);
+}
 
-  axios.get(apiUrl).then(showForecast);
+function handleSubmit(event) {
+  event.preventDefault();
+  let cityInputElement = document.querySelector("#city-search");
+  search(cityInputElement.value);
 }
 
 let citySearch = document.querySelector("#search-city");
-citySearch.addEventListener("submit", citySearchNow);
+citySearch.addEventListener("submit", handleSubmit);
 
 function showCurrentLocation(position) {
   let apiKey = "9eb0f850fd87a403bc76584028e843ca";
@@ -118,7 +118,7 @@ function showCurrentLocation(position) {
   let units = "imperial";
   let apiUrl = `${endpoint}?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=${units}`;
 
-  axios.get(apiUrl).then(showForecast);
+  axios.get(apiUrl).then(displayForecastElements);
 }
 
 function getCurrentPosition() {
@@ -129,3 +129,4 @@ let currentLocation = document.querySelector("#current-location-button");
 currentLocation.addEventListener("click", getCurrentPosition);
 
 displayForecast();
+search("Denver");
